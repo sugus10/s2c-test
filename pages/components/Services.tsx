@@ -126,7 +126,7 @@ const ServiceSection = ({
         </p>
         <div className="flex gap-3 items-center max-w-[500px] flex-wrap">
           {tech.map((val) => (
-            <button className="p-2 px-5 bg-transparent border-2 rounded-full">
+            <button key={val} className="p-2 px-5 bg-transparent border-2 rounded-full">
               {val}
             </button>
           ))}
