@@ -1,24 +1,23 @@
-  import { Geist, Geist_Mono } from "next/font/google";
-  import Navbar from "./components/Navbar";
-  import Hero from "./components/Hero";
-import ParallaxSection from "./components/research-section";
+import { Geist, Geist_Mono } from "next/font/google";
 
-  const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-  });
+import Navbar from "./components/Navbar";
+import HomePage from "./(pages)/home/page";
 
-  const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-  });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-  export default function Home() {
-    return (
-      <div className="h-screen">
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export default function Home() {
+  return (
+    <div className="h-screen">
       <Navbar />
-      <Hero />
-      {/* <ParallaxSection/> */}
-      </div>
-    );
-  }
+      <HomePage />
+    </div>
+  );
+}

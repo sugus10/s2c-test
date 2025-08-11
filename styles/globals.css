@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  background: #0185b6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.secondary-font {
+  font-family: "Nunito Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.font-satisfy {
+  font-family: "Satisfy", cursive;
+}
+
+@layer utilities {
+  @keyframes slowFall {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(50vh) scale(1.02);
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateY(100vh) scale(1);
+      opacity: 0;
+    }
+  }
+
+  .animate-slowFall {
+    animation-name: slowFall;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-third {
+  font-family: "Nunito Sans", sans-serif;
 }
